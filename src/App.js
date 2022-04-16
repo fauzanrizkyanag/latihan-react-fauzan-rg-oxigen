@@ -1,23 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  const firstName = "Fauzan ";
+  const lastName = "Rizkyana Gunawan";
+  const pengurusOxigen = ["Ahmad Muji B", "Rifqi Rifaldi", "Angga Saeful", "Hendra", "Nada Ika Sari"];
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>{firstName + lastName}</h1>
+      {pengurusOxigen.map((e) => {
+        return (
+          <ul>
+            <li>{e}</li>
+          </ul>
+        );
+      })}
     </div>
   );
 }
